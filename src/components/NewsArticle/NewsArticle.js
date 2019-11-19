@@ -1,21 +1,8 @@
 import React from 'react';
 import './NewsArticle.css';
 
-class NewsArticle extends Component {
-  constructor() {
-    super();
-    this.state = {
-
-    }
-  }
-
-  render() {
-    return(
-      <div className="app">
-
-      </div>
-    )
-  }
-}
+const NewsArticle = (props) => {
+  return <h2>{props}</h2>;
+};
 
 export default NewsArticle;
