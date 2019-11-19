@@ -1,6 +1,21 @@
 import React from 'react';
 import './NewsArticle.css';
 
-// NEWSARTICLE COMPONENT CODE GOES HERE
+class NewsArticle extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    }
+  }
+
+  render() {
+    return(
+      <div className="app">
+
+      </div>
+    )
+  }
+}
 
 export default NewsArticle;
