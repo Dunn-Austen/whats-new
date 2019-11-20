@@ -5,9 +5,9 @@ const NewsArticle = (props) => {
   return (
     <article className="news-article">
       <h3>{props.headline}</h3>
-      <p>{props.img}</p>
+      <img className="local-img" src={props.img} alt={props.headline}/>
       <p>{props.description}</p>
-      <p>{props.url}</p>
+      <a href={props.url}>{props.url}</a>
     </article>
   )
 };
