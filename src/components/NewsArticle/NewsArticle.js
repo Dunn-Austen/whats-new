@@ -2,7 +2,11 @@ import React from 'react';
 import './NewsArticle.css';
 
 const NewsArticle = (props) => {
-  return <h2>{props}</h2>;
+  return (
+    <div className="news-article">
+      {props}
+    </div>;
+  )
 };
 
 export default NewsArticle;
