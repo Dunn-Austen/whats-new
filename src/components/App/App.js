@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NewsContainer from '../NewsContainer/NewsContainer';
 import entertainment from '../../data/entertainment';
 import health from '../../data/health';
 import local from '../../data/local';
@@ -16,9 +17,9 @@ class App extends Component {
 
   render () {
     return (
-      <div className="app">
-        <h1>'Placeholder Text'</h1>
-      </div>
+      <main className="app">
+        <NewsContainer localNews={this.state.localNews}/>
+      </main>
     );
   }
 }
