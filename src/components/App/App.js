@@ -24,10 +24,27 @@ class App extends Component {
   }
 
   searchArticlesByKeyword = (searchQuery) => {
-    this.state.genreDisplayed.filter(newsStory => {
+    const matchingArticles = this.state.genreDisplayed.filter(newsStory => {
       return newsStory.headline.toUpperCase().includes(searchQuery.toUpperCase())
         || newsStory.description.toUpperCase().includes(searchQuery.toUpperCase())
     })
+
+    if (matchingArticles.length > 0) {
+      this.setState({
+        'genreDisplayed': matchingArticles
+      })
+
+    } else {
+      this.setState({
+        'genreDisplayed': [{
+            id: null,
+            headline: 'No matching results',
+            img: 'https://store.hallsigns.com/assets/images/W14-1.png',
+            description: 'Please search using a different keyword',
+            url: null
+          }]
+      })
+    }
   }
 
   render () {
