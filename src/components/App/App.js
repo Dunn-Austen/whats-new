@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Menu from '../Menu/Menu';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import entertainment from '../../data/entertainment';
 import health from '../../data/health';
@@ -18,6 +19,13 @@ class App extends Component {
   render () {
     return (
       <main className="app">
+        <Menu
+          entertainment={entertainment}
+          health={health}
+          local={local}
+          science={science}
+          technology={technology}
+        />
         <NewsContainer localNews={this.state.localNews}/>
       </main>
     );
