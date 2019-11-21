@@ -16,6 +16,12 @@ class App extends Component {
     }
   }
 
+  switchStateGenre(genre) {
+    this.setState({
+      genreDisplayed: genre
+    })
+  }
+
   render () {
     return (
       <main className="app">
