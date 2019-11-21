@@ -4,7 +4,7 @@ import './NewsContainer.css'
 
 const NewsContainer = (props) => {
 
-  const newsArticles = props.localNews.map(newsBlock => {
+  const newsArticles = props.genreDisplayed.map(newsBlock => {
     return (
       <NewsArticle
         headline={newsBlock.headline}
@@ -18,9 +18,9 @@ const NewsContainer = (props) => {
   });
 
   return (
-    <div className='news-container'>
+    <section className='news-container'>
       {newsArticles}
-    </div>
+    </section>
   )
 };
 
