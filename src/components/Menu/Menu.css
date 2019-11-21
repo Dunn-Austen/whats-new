@@ -1,0 +1,9 @@
+.menu-btn {
+  height: 50px;
+  width: 100px;
+}
+
+.menu-btn:hover {
+  background-color: yellow;
+  color: black;
+}
