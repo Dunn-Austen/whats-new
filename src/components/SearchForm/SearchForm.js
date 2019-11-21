@@ -5,9 +5,8 @@ const SearchForm = (props) => {
 
   return(
     <section>
-      <input className="search-input" placeholder="Search criteria"></input>
-      <button>Enter</button>
-      //  onClick={() => }
+      <input className="search-input" placeholder="Keyword"></input>
+      <button className="search-btn" onClick={() => props.searchArticlesByKeyword(document.querySelector('.search-input').value)}>Search</button>
     </section>
   )
 }
