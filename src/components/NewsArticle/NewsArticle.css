@@ -1,0 +1,10 @@
+.news-article {
+  border: 3px solid black;
+  padding: 10px;
+  width: 50%;
+}
+
+.local-img {
+  height: 160px;
+  width: auto;
+}
