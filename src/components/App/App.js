@@ -16,9 +16,9 @@ class App extends Component {
     }
   }
 
-  switchStateGenre(genre) {
+  switchStateGenre = (genre) => {
     this.setState({
-      genreDisplayed: genre
+      'genreDisplayed': genre
     })
   }
 
@@ -30,6 +30,7 @@ class App extends Component {
           health={health}
           local={local}
           science={science}
+          switchStateGenre={this.switchStateGenre}
           technology={technology}
         />
         <NewsContainer genreDisplayed={this.state.genreDisplayed}/>
