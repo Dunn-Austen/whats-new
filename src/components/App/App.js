@@ -25,8 +25,8 @@ class App extends Component {
 
   searchArticlesByKeyword = (searchQuery) => {
     this.state.genreDisplayed.filter(newsStory => {
-      return newsStory.headline.toUppercase().includes(searchQuery.toUppercase())
-        || newsStory.description.toUppercase().includes(searchQuery.toUppercase())
+      return newsStory.headline.toUpperCase().includes(searchQuery.toUpperCase())
+        || newsStory.description.toUpperCase().includes(searchQuery.toUpperCase())
     })
   }
 
@@ -42,7 +42,7 @@ class App extends Component {
           technology={technology}
         />
         <NewsContainer genreDisplayed={this.state.genreDisplayed}/>
-        <SearchForm searchArticlesByKeyword={searchArticlesByKeyword}/>
+        <SearchForm searchArticlesByKeyword={this.searchArticlesByKeyword}/>
       </main>
     );
   }
