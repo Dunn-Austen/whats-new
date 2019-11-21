@@ -1,6 +1,14 @@
 import React from 'react';
 import './SearchForm.css';
 
-// SEARCHFORM COMPONENT CODE GOES HERE
+const SearchForm = (props) => {
+
+  return(
+    <section>
+      <input className="search-input" placeholder="Keyword"></input>
+      <button className="search-btn" onClick={() => props.searchArticlesByKeyword(document.querySelector('.search-input').value)}>Search</button>
+    </section>
+  )
+}
 
 export default SearchForm;

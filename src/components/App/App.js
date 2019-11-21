@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Menu from '../Menu/Menu';
 import NewsContainer from '../NewsContainer/NewsContainer';
+import SearchForm from '../SearchForm/SearchForm';
 import entertainment from '../../data/entertainment';
 import health from '../../data/health';
 import local from '../../data/local';
@@ -22,6 +23,30 @@ class App extends Component {
     })
   }
 
+  searchArticlesByKeyword = (searchQuery) => {
+    const matchingArticles = this.state.genreDisplayed.filter(newsStory => {
+      return newsStory.headline.toUpperCase().includes(searchQuery.toUpperCase())
+        || newsStory.description.toUpperCase().includes(searchQuery.toUpperCase())
+    })
+
+    if (matchingArticles.length > 0) {
+      this.setState({
+        'genreDisplayed': matchingArticles
+      })
+
+    } else {
+      this.setState({
+        'genreDisplayed': [{
+            id: null,
+            headline: 'No matching results',
+            img: 'https://store.hallsigns.com/assets/images/W14-1.png',
+            description: 'Please search using a different keyword',
+            url: null
+          }]
+      })
+    }
+  }
+
   render () {
     return (
       <main className="app">
@@ -34,6 +59,7 @@ class App extends Component {
           technology={technology}
         />
         <NewsContainer genreDisplayed={this.state.genreDisplayed}/>
+        <SearchForm searchArticlesByKeyword={this.searchArticlesByKeyword}/>
       </main>
     );
   }
