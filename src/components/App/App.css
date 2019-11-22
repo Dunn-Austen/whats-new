@@ -5,8 +5,36 @@
 }
 
 .app {
-  display: flex;
+  display: grid;
+  grid-template-areas:
+          "nav nav"
+          "aside content";
+  grid-template-columns: .5fr 3fr;
+  grid-template-rows: .5fr 4fr;
   height: 100vh;
+  margin-right: 20px;
   text-align: center;
   width: 100%;
+}
+
+.menu {
+  border: 1px solid red;
+  grid-area: nav;
+}
+
+.search-form {
+  border: 1px solid black;
+  grid-area: aside;
+  display: flex;
+}
+
+.search-container {
+}
+
+.news-container {
+  border: 2px solid orange;
+  display: grid;
+  grid-area: content;
+  grid-template-columns: 1fr 1fr;
+  overflow: scroll;
 }

@@ -63,7 +63,7 @@ class App extends Component {
 
   render () {
     return (
-      <main className="app">
+      <section className="app">
         <Menu
           entertainment={entertainment}
           health={health}
@@ -74,7 +74,7 @@ class App extends Component {
         />
         <NewsContainer genreDisplayed={this.state.genreDisplayed}/>
         <SearchForm searchArticlesByKeyword={this.searchArticlesByKeyword}/>
-      </main>
+      </section>
     );
   }
 }

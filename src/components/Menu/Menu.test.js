@@ -21,7 +21,6 @@ describe('Menu', () => {
   });
 
   it('should invoke switchStateGenre() upon button click', () => {
-
     wrapper.find('#entertainment-btn').simulate('click');
     expect(wrapper.switchStateGenre).toEqual(undefined);
   });
