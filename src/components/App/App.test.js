@@ -19,12 +19,10 @@ describe('App', () => {
     expect(wrapper.state('genreDisplayed')).toEqual(expected);
   });
 
-  it('should update state when searchArticlesByKeyword is called', () => {
+  it('should update state when searchArticlesByKeyword returns an array.length > 0', () => {
     const wrapper = shallow(<App />);
     const mockSearchQuery = 'The Who';
-
-    wrapper.instance().searchArticlesByKeyword(mockSearchQuery);
-    expect(wrapper.state('genreDisplayed')).toEqual([
+    const expected = [
       {
       id: 1,
       headline: 'The Who postpones Denver Concert at the Pepsi Center',
@@ -32,7 +30,27 @@ describe('App', () => {
       description: 'Classic-rock band The Who has postponed its Denver concert, set for Sunday, Sept. 29, after an illness robbed singer Roger Daltrey of his voice, the band said on Twitter.',
       url: 'https://theknow.denverpost.com/2019/09/27/the-who-postpones-denver-concert/225182/'
       }
-    ]);
+    ]
+
+    wrapper.instance().searchArticlesByKeyword(mockSearchQuery);
+    expect(wrapper.state('genreDisplayed')).toEqual(expected);
+  });
+
+  it('should update state when searchArticlesByKeyword returns an array.length = 0', () => {
+    const wrapper = shallow(<App />);
+    const mockSearchQuery = 'Surfcity';
+    const expected = [
+      {
+      id: null,
+      headline: 'No matching results',
+      img: 'https://store.hallsigns.com/assets/images/W14-1.png',
+      description: 'Please search using a different keyword',
+      url: null
+      }
+    ]
+
+    wrapper.instance().searchArticlesByKeyword(mockSearchQuery);
+    expect(wrapper.state('genreDisplayed')).toEqual(expected);
   });
 
 })
