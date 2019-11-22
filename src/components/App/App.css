@@ -7,9 +7,9 @@
 .app {
   display: grid;
   grid-template-areas:
-          "nav nav"
-          "aside content";
-  grid-template-columns: .5fr 3fr;
+    "leftnav rightnav"
+    "content content";
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: .5fr 4fr;
   height: 100vh;
   margin-right: 20px;
@@ -18,13 +18,17 @@
 }
 
 .menu {
+  align-items: center;
   border: 1px solid red;
-  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-area: leftnav;
 }
 
 .search-form {
   border: 1px solid black;
-  grid-area: aside;
+  grid-area: rightnav;
   display: flex;
 }
 
