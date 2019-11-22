@@ -3,15 +3,17 @@ import App from './App';
 import { shallow } from 'enzyme';
 
 describe('App', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  })
 
   it('should match the snapshot', () => {
-    const wrapper = shallow(<App />);
-
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should update state when switchStateGenre is called', () => {
-    const wrapper = shallow(<App />);
     const mockGenre = [{mockProperty: 'MockValue'}];
     const expected = mockGenre;
 
@@ -20,7 +22,6 @@ describe('App', () => {
   });
 
   it('should update state when searchArticlesByKeyword returns an array.length > 0', () => {
-    const wrapper = shallow(<App />);
     const mockSearchQuery = 'The Who';
     const expected = [
       {
@@ -37,7 +38,6 @@ describe('App', () => {
   });
 
   it('should update state when searchArticlesByKeyword returns an array.length = 0', () => {
-    const wrapper = shallow(<App />);
     const mockSearchQuery = 'Surfcity';
     const expected = [
       {
