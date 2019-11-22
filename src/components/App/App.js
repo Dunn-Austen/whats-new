@@ -17,6 +17,20 @@ class App extends Component {
     }
   }
 
+//Fetch psuedoCode
+  // componentDidMount() {
+  // fetch('https://whats-new-api.herokuapp.com/api/v1/news')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     entertainment = data.entertainment;
+  //     health = data.health;
+  //     local = data.local;
+  //     science = data.science;
+  //     technology = data.technology;
+  //     this.setState({'genreDisplayed': local})
+  //   })
+  // }
+
   switchStateGenre = (genre) => {
     this.setState({
       'genreDisplayed': genre

@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import NewsArticle from './NewsArticle';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<NewsArticle />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('NewsArticle', () => {
+
+  it('should match the snapshot with all data correctly passed', () => {
+    const wrapper = shallow(<NewsArticle
+      headline={'A'}
+      img={'B'}
+      description={'C'}
+      url={'D'}
+      id={1}
+      key={1}
+      />);
+
+    expect(wrapper).toMatchSnapshot();
+  })
+})

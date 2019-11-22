@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should match the snapshot with all data correctly passed 1`] = `
+<nav
+  className="menu"
+>
+  <button
+    className="menu-btn"
+    id="entertainment-btn"
+    onClick={[Function]}
+  >
+    Entertainment
+  </button>
+  <button
+    className="menu-btn"
+    id="health-btn"
+    onClick={[Function]}
+  >
+    Health
+  </button>
+  <button
+    className="menu-btn"
+    id="local-btn"
+    onClick={[Function]}
+  >
+    Local
+  </button>
+  <button
+    className="menu-btn"
+    id="science-btn"
+    onClick={[Function]}
+  >
+    Science
+  </button>
+  <button
+    className="menu-btn"
+    id="technology-btn"
+    onClick={[Function]}
+  >
+    Technology
+  </button>
+</nav>
+`;
