@@ -20,7 +20,7 @@ describe('Menu', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call switchStateGenre() upon button click', () => {
+  it('should invoke switchStateGenre() upon button click', () => {
 
     wrapper.find('#entertainment-btn').simulate('click');
     expect(wrapper.switchStateGenre).toEqual(undefined);

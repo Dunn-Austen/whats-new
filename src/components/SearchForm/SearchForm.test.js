@@ -10,5 +10,14 @@ describe('SearchForm', () => {
       />);
 
     expect(wrapper).toMatchSnapshot();
-  })
+  });
+
+  it('should invoke searchArticlesByKeyword() upon button click', () => {
+    const wrapper = shallow(<SearchForm
+      searchArticlesByKeyword={jest.fn()}
+      />);
+
+    wrapper.find('button').simulate('click');
+    expect(wrapper.searchArticlesByKeyword).toHaveBeenCalled();
+  });
 })
