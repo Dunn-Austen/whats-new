@@ -1,9 +1,14 @@
 .news-article {
+  align-items: center;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
   padding: 10px;
 }
 
 .news-img {
-  height: auto;
-  width: 75%;
+  height: 200px;
+  width: auto;
 }

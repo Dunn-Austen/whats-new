@@ -10,21 +10,24 @@ const Menu = (props) => {
 
   return (
     <nav className="menu">
-      <button id="entertainment-btn" className="menu-btn" onClick={() => props.switchStateGenre(entertainment)}>
-        Entertainment
-      </button>
-      <button id="health-btn" className="menu-btn" onClick={() => props.switchStateGenre(health)}>
-        Health
-      </button>
-      <button id="local-btn" className="menu-btn" onClick={() => props.switchStateGenre(local)}>
-        Local
-      </button>
-      <button id="science-btn" className="menu-btn" onClick={() => props.switchStateGenre(science)}>
-        Science
-      </button>
-      <button id="technology-btn" className="menu-btn" onClick={() => props.switchStateGenre(technology)}>
-        Technology
-      </button>
+      <h4>Select Articles by Type:</h4>
+      <div className="btn-container">
+        <button id="entertainment-btn" className="menu-btn" onClick={() => props.switchStateGenre(entertainment)}>
+          Entertainment
+        </button>
+        <button id="health-btn" className="menu-btn" onClick={() => props.switchStateGenre(health)}>
+          Health
+        </button>
+        <button id="local-btn" className="menu-btn" onClick={() => props.switchStateGenre(local)}>
+          Local
+        </button>
+        <button id="science-btn" className="menu-btn" onClick={() => props.switchStateGenre(science)}>
+          Science
+        </button>
+        <button id="technology-btn" className="menu-btn" onClick={() => props.switchStateGenre(technology)}>
+          Technology
+        </button>
+      </div>
     </nav>
   )
 }
