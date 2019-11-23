@@ -1,9 +1,19 @@
+.genre-text {
+  background-color: #c9e1ff;
+}
+
+.btn-container {
+  background-color: #c9e1ff;
+}
+
 .menu-btn {
+  background-color: white;
+  border: 1px solid #1B009F;
   height: 50px;
   width: 100px;
 }
 
 .menu-btn:hover {
-  background-color: yellow;
+  background-color: #ccafbd;
   color: black;
 }
