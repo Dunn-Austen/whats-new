@@ -3,7 +3,7 @@ Feel free to peruse some news as you explore a student's first baby steps with R
 
 ---
 
-**This gif offers a quick preview**
+**Preview the Page**
 ![image](https://user-images.githubusercontent.com/42498559/69471841-36c39e80-0d61-11ea-8558-1157da1899c1.png)
 
 
