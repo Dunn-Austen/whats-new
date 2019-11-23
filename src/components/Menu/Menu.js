@@ -10,7 +10,7 @@ const Menu = (props) => {
 
   return (
     <nav className="menu">
-      <h4>Select Articles by Type:</h4>
+      <h4 className="genre-text">Select Articles by Type:</h4>
       <div className="btn-container">
         <button id="entertainment-btn" className="menu-btn" onClick={() => props.switchStateGenre(entertainment)}>
           Entertainment
