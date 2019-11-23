@@ -2,34 +2,34 @@ import React, { Component } from 'react';
 import Menu from '../Menu/Menu';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import SearchForm from '../SearchForm/SearchForm';
-import entertainment from '../../data/entertainment';
-import health from '../../data/health';
-import local from '../../data/local';
-import science from '../../data/science';
-import technology from '../../data/technology';
 import './App.css';
+
+let entertainment
+let health
+let local
+let science
+let technology
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      'genreDisplayed': local
+      'genreDisplayed': []
     }
   }
 
-//Fetch psuedoCode
-  // componentDidMount() {
-  // fetch('https://whats-new-api.herokuapp.com/api/v1/news')
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     entertainment = data.entertainment;
-  //     health = data.health;
-  //     local = data.local;
-  //     science = data.science;
-  //     technology = data.technology;
-  //     this.setState({'genreDisplayed': local})
-  //   })
-  // }
+  componentDidMount() {
+  fetch('https://whats-new-api.herokuapp.com/api/v1/news')
+    .then(response => response.json())
+    .then(data => {
+      entertainment = data.entertainment;
+      health = data.health;
+      local = data.local;
+      science = data.science;
+      technology = data.technology;
+      this.setState({'genreDisplayed': local})
+    })
+  }
 
   switchStateGenre = (genre) => {
     this.setState({
