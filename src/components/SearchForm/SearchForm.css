@@ -1,0 +1,22 @@
+.search-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.search-input {
+  font-size: 18px;
+  height: 30px;
+  text-indent: 5px;
+}
+
+.search-btn {
+  height: 30px;
+  width: 90px;
+}
+
+.search-btn:hover {
+  background-color: yellow;
+  color: black;
+}

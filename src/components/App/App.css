@@ -23,16 +23,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  grid-area: leftnav;
+  grid-area: rightnav;
 }
 
 .search-form {
+  align-items: center;
   border: 1px solid black;
-  grid-area: rightnav;
   display: flex;
-}
-
-.search-container {
+  grid-area: leftnav;
+  justify-content: center;
 }
 
 .news-container {
