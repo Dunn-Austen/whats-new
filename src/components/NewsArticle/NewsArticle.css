@@ -8,10 +8,6 @@
   padding: 10px;
 }
 
-.news-article:hover {
-  background-color: #ccafbd;
-}
-
 .news-img {
   height: 200px;
   width: auto;
